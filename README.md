@@ -28,7 +28,11 @@ Here is a sample class using db_facet.
 It "clones" an user account with all its dependencies to a fresh new user.
 
 ```ruby
-class ExportImport
+
+# usage:
+# new_fresh_user = CloneAccount.new template_user.id, {name: 'Demo account', email: 'demo@example.com'}
+
+class CloneAccount
 
   INCLUDE_TEMPLATE_MODELS = %w(
     User
