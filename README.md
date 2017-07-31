@@ -74,6 +74,9 @@ class CloneAccount
   private
 
   def template_overrides user
+    @new_attrs.delete "password"
+    @new_attrs.delete "session_token"
+   
     @new_attrs.merge!(
       profile_theme: 34
     )
