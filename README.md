@@ -24,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-Here is a smaple class using db_facet.  
+Here is a sample class using db_facet.  
 It "clones" an user account with all its dependencies to a fresh new user.
 
 ```ruby
