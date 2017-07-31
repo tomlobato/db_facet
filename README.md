@@ -1,6 +1,8 @@
 # db_facet
 
-db_facet is a collection of [ruby](https://github.com/ruby/ruby) classes to crawls into a [rails](https://github.com/rails/rails) database and generates a Hash structure representing the data and its entity relations (DbSpider).  
+db_facet extracts and inserts subsets of a database content, like a full user account with all its photos, invoices and history.
+
+DbSpider recursively fetch records from a database and generates a Hash structure representing the data entities and its relations.
 
 The Hash structure can be read by DbSpiderWeaver to insert the data into the database again.  
 
