@@ -1,7 +1,10 @@
 # db_facet
 
-db_facet is a collection os classes to crawls into a database and generates a Hash structure representing the data and its entity relations (DbSpider).
-The Hash structure can be read by DbSpiderWeaver to insert data into the database again.
+db_facet is a collection os classes to crawls into a database and generates a Hash structure representing the data and its entity relations (DbSpider).  
+
+The Hash structure can be read by DbSpiderWeaver to insert the data into the database again.  
+
+Common usages would be to export and import an account, or build a fresh account by cloning an existing one.
 
 ## Installation
 
