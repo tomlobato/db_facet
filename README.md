@@ -8,6 +8,8 @@ Common usages would be to export and import an account, or build a fresh account
 
 It\`s designed to ensure a blazing fast database write (DbSpiderWeaver, that relies on [activerecord-import](https://github.com/zdennis/activerecord-import)) and supports rails [globalize](https://github.com/globalize/globalize).
 
+db_facet is written to work on RubyOnRails, but can be used in any system just by writing the activerecord models and its relations representing your database.
+
 ## Installation
 
 Add this line to your application's Gemfile:
