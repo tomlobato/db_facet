@@ -1,10 +1,12 @@
 # db_facet
 
-db_facet is a collection os classes to crawls into a database and generates a Hash structure representing the data and its entity relations (DbSpider).  
+db_facet is a collection of [ruby](https://github.com/ruby/ruby) classes to crawls into a [rails](https://github.com/rails/rails) database and generates a Hash structure representing the data and its entity relations (DbSpider).  
 
 The Hash structure can be read by DbSpiderWeaver to insert the data into the database again.  
 
 Common usages would be to export and import an account, or build a fresh account by cloning an existing one.
+
+It\`s designed to ensure a blazing fast database write (DbSpiderWeaver, that relies on [activerecord-import](https://github.com/zdennis/activerecord-import)) and supports rails [globalize](https://github.com/globalize/globalize).
 
 ## Installation
 
@@ -29,8 +31,10 @@ It "clones" an user account with all its dependencies to a fresh new user.
 
 ```ruby
 
-# usage:
-# new_fresh_user = CloneAccount.new template_user.id, {name: 'Demo account', email: 'demo@example.com'}
+# Usage:
+# new_attrs = {name: 'Demo account', email: 'demo@example.com'}
+# new_fresh_user = CloneAccount.new(template_user.id, new_attrs).build
+#
 
 class CloneAccount
 
