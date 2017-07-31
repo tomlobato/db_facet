@@ -1,5 +1,11 @@
 # db_facet
 
+[![Gem Version](https://badge.fury.io/rb/db_facet.svg)](https://badge.fury.io/rb/db_facet)
+[![Code Climate](https://codeclimate.com/github/tomlobato/db_facet.svg)](https://codeclimate.com/github/tomlobato/db_facet)
+![](http://ruby-gem-downloads-badge.herokuapp.com/db_facet?type=total&label=gem%20downloads)
+ 
+By [Bettercall.io](https://bettercall.io/).
+
 db_facet extracts and inserts subsets of a database content, like a full user account with all its photos, invoices and history.
 
 DbSpider recursively fetch records from a database and generates a Hash structure representing the data entities and its relations.
