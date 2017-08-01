@@ -33,14 +33,13 @@ Or install it yourself as:
 ## Usage
 
 Here is a sample class using db_facet.  
-It clones an user account with all its dependencies to a fresh new user.
+It clones an user account with all its dependencies to a fresh new account.
 
 ```ruby
 
 # Usage:
 # new_attrs = {name: 'Demo account', email: 'demo@example.com'}
-# new_fresh_user = CloneAccount.new(template_user.id, new_attrs).build
-#
+# new_account = CloneAccount.new(template_user.id, new_attrs).build
 
 class CloneAccount
 
