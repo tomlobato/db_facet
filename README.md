@@ -92,11 +92,9 @@ class CloneAccount
   # db_facet interface
 
   def fetch_seed template_user_id
-    # You could cache the generated data structure if using 
-    # it often and it is viable to clear when changed.
-    # Rails.cache.fetch "export-import-seed-#{template_user_id}" do
+    Rails.cache.fetch "account-seed-#{template_user_id}" do
       DbSpider.new(User.find(template_user_id), INCLUDE_MODELS).spide
-    #end
+    end
   end
 
   def override_seed! seed, overrides
