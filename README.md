@@ -6,15 +6,11 @@
  
 By [Bettercall.io](https://bettercall.io/).
 
-db_facet extracts and inserts subsets of a database content, like a full user account with all its photos, invoices and history.
+db_facet recursively fetches records from a database and generates a tree structure representing the records and its relations. This structure can be stored and read by DbSpiderWeaver to insert the data into the database again.  
 
-DbSpider recursively fetch records from a database and generates a Hash structure representing the data entities and its relations.
-
-The Hash structure can be read by DbSpiderWeaver to insert the data into the database again.  
+It\`s designed for fast database writes (relying on raw SQL bulk INSERT\`s with [activerecord-import](https://github.com/zdennis/activerecord-import)) and supports rails [globalize](https://github.com/globalize/globalize).
 
 Common usages would be to export and import an account, or build a fresh account by cloning an existing one.
-
-It\`s designed to ensure a blazing fast database write (DbSpiderWeaver, that relies on [activerecord-import](https://github.com/zdennis/activerecord-import)) and supports rails [globalize](https://github.com/globalize/globalize).
 
 db_facet is written to work on RubyOnRails, but can be used in any system just by writing the activerecord models and its relations representing your database.
 
@@ -37,7 +33,7 @@ Or install it yourself as:
 ## Usage
 
 Here is a sample class using db_facet.  
-It "clones" an user account with all its dependencies to a fresh new user.
+It clones an user account with all its dependencies to a fresh new user.
 
 ```ruby
 
