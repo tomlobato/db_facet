@@ -59,7 +59,7 @@ class CloneAccount
   def build 
     seed = fetch_seed @template_user_id
 
-    override_seed! seed, overrides(User.new)
+    override_seed! seed, template_overrides(User.new)
     new_user_id = save! seed
 
     User.find new_user_id
