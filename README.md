@@ -58,9 +58,8 @@ class CloneAccount
   
   def build 
     seed = fetch_seed @template_user_id
-    tmp_user = build_user
 
-    override_seed! seed, overrides(tmp_user)
+    override_seed! seed, overrides(User.new)
     new_user_id = save! seed
 
     User.find new_user_id
@@ -85,10 +84,6 @@ class CloneAccount
     @new_attrs
   end
 
-  def build_user
-    user.new
-  end
-  
   # db_facet interface
 
   def fetch_seed template_user_id
